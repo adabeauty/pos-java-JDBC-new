@@ -7,6 +7,7 @@ public class PromotionFactory {
 
     public static Promotion generatePromotion(int type) {
         Promotion promotion = null;
+        
         switch(type){
             case BUY_TWO_ONE_FREE:
                 promotion = new BuyTwoOneFreePromotion();
@@ -17,7 +18,6 @@ public class PromotionFactory {
             case DISCOUNT:
                 promotion = new DiscountPromotion();
                 break;
-
         }
         return promotion;
     }
