@@ -1,7 +1,7 @@
 package com.thoughtworks.iamcoach.pos.module;
 
 import org.junit.Test;
-import com.thoughtworks.iamcoach.pos.module.Promotion;
+
 import static org.fest.assertions.api.Assertions.assertThat;
 
 public class PromotionTest {
