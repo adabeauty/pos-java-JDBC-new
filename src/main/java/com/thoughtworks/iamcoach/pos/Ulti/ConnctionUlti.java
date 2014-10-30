@@ -9,7 +9,7 @@ public class ConnctionUlti {
     private String driverName = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://localhost:3306/pos_java?useUnicode=true&characterEncoding=utf-8";   //pos是database名字
     private String user = "root";
-    private String password = "wh015";
+    private String password = "wh0415";
 
     private Connection conn = null;
     public Connection getConnection(){
