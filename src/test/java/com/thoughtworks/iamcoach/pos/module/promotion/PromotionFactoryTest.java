@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.module;
+package com.thoughtworks.iamcoach.pos.module.promotion;
 
 import com.thoughtworks.iamcoach.pos.module.promotion.BuyTwoOneFreePromotion;
 import com.thoughtworks.iamcoach.pos.module.promotion.DiscountPromotion;
