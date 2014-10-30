@@ -10,11 +10,9 @@ import static org.fest.assertions.api.Assertions.assertThat;
 public class PromotionFactoryTest {
     @Test
     public void can_generate_BuyTwoOneFreePromotion(){
-        int type = 1;
-        PromotionFactory promotionFactory = new PromotionFactory();
-        promotionFactory.generatePromotion(type);
-        assertThat(promotionFactory.generatePromotion(type) instanceof BuyTwoOneFreePromotion).isTrue();
+        assertThat(PromotionFactory.generatePromotion(1) instanceof BuyTwoOneFreePromotion).isTrue();
+        assertThat(PromotionFactory.generatePromotion(2) instanceof SeconHalfPromotion).isTrue();
+        assertThat(PromotionFactory.generatePromotion(3) instanceof DiscountPromotion).isTrue();
     }
-
 
 }
