@@ -11,5 +11,4 @@ public class PromotionFactoryTest {
         assertThat(PromotionFactory.generatePromotion(2) instanceof SeconHalfPromotion).isTrue();
         assertThat(PromotionFactory.generatePromotion(3) instanceof DiscountPromotion).isTrue();
     }
-
 }
