@@ -1,4 +1,6 @@
-package com.thoughtworks.iamcoach.pos.module;
+package com.thoughtworks.iamcoach.pos.module.promotion;
+
+import com.thoughtworks.iamcoach.pos.module.Item;
 
 public abstract class Promotion {
 

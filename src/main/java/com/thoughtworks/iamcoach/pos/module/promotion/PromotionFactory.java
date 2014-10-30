@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.module;
+package com.thoughtworks.iamcoach.pos.module.promotion;
 
 public class PromotionFactory {
     public static final int BUY_TWO_ONE_FREE = 1;

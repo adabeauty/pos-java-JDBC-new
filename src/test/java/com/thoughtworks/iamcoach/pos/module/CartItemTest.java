@@ -1,6 +1,10 @@
 package com.thoughtworks.iamcoach.pos.module;
 
 import com.thoughtworks.iamcoach.pos.Dao.*;
+import com.thoughtworks.iamcoach.pos.module.promotion.BuyTwoOneFreePromotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.SeconHalfPromotion;
 import org.junit.Test;
 
 import java.util.ArrayList;

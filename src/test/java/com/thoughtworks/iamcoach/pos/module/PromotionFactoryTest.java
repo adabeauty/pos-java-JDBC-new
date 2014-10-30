@@ -1,5 +1,9 @@
 package com.thoughtworks.iamcoach.pos.module;
 
+import com.thoughtworks.iamcoach.pos.module.promotion.BuyTwoOneFreePromotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.PromotionFactory;
+import com.thoughtworks.iamcoach.pos.module.promotion.SeconHalfPromotion;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;

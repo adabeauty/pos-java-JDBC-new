@@ -1,8 +1,8 @@
 package com.thoughtworks.iamcoach.pos.Dao;
 
 import com.thoughtworks.iamcoach.pos.Ulti.ConnctionUlti;
-import com.thoughtworks.iamcoach.pos.module.Promotion;
-import com.thoughtworks.iamcoach.pos.module.PromotionFactory;
+import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.module.promotion.PromotionFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
