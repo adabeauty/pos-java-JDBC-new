@@ -1,10 +1,7 @@
 package com.thoughtworks.iamcoach.pos.Dao;
 
-import com.thoughtworks.iamcoach.pos.module.Category;
+import com.thoughtworks.iamcoach.pos.module.*;
 import com.thoughtworks.iamcoach.pos.Ulti.ConnctionUlti;
-import com.thoughtworks.iamcoach.pos.module.Item;
-import com.thoughtworks.iamcoach.pos.module.Promotion;
-import com.thoughtworks.iamcoach.pos.module.PromotionFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
