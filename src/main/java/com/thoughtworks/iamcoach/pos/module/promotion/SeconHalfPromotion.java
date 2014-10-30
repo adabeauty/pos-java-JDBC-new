@@ -1,7 +1,6 @@
 package com.thoughtworks.iamcoach.pos.module.promotion;
 
 import com.thoughtworks.iamcoach.pos.module.Item;
-import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
 
 public class SeconHalfPromotion extends Promotion {
     public SeconHalfPromotion() {
