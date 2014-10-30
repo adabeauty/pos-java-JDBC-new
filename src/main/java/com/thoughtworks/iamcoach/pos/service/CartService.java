@@ -7,6 +7,11 @@ import com.thoughtworks.iamcoach.pos.module.*;
 import java.util.ArrayList;
 
 public class CartService {
+    private ItemDao itemImple = new ItemImple();
+
+    public void setItemImple(ItemDao itemImple) {
+        this.itemImple = itemImple;
+    }
 
     public ArrayList<CartItem> getCartInfo() {
 
@@ -15,7 +20,6 @@ public class CartService {
         ReadFileUlti readFileUlti = new ReadFileUlti();
         ArrayList<String> inputs = readFileUlti.readFile("cart.txt");
 
-        ItemDao itemImple = new ItemImple();
         ArrayList<Item> items = itemImple.getItems();
         ArrayList<Promotion> promotionArrayList = null;
 
