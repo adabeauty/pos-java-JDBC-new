@@ -1,7 +1,6 @@
 package com.thoughtworks.iamcoach.pos.service;
 
-import com.thoughtworks.iamcoach.pos.Dao.ItemDao;
-import com.thoughtworks.iamcoach.pos.Dao.ItemImple;
+import com.thoughtworks.iamcoach.pos.Dao.*;
 import com.thoughtworks.iamcoach.pos.module.*;
 import org.junit.Test;
 
