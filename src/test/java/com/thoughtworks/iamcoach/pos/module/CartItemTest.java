@@ -1,14 +1,12 @@
 package com.thoughtworks.iamcoach.pos.module;
 
-import com.thoughtworks.iamcoach.pos.Dao.PromotionDao;
-import com.thoughtworks.iamcoach.pos.Dao.PromotionImple;
+import com.thoughtworks.iamcoach.pos.Dao.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 import static org.fest.assertions.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class CartItemTest {
     @Test
