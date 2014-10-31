@@ -16,6 +16,7 @@ public class ItemImple implements ItemDao {
     @Override
     public Item getItemByBarcode(String barcode) {
         String sql = "SELECT * FROM items WHERE barcode = ?";
+
         Item item = null;
         Connection conn = connctionUlti.getConnection();
         try{
@@ -23,11 +24,10 @@ public class ItemImple implements ItemDao {
             pstmt.setString(1, barcode);
             rs = pstmt.executeQuery();
             rs.next();
+
             item = new Item(rs.getString("id"), rs.getInt("categoryId"), rs.getString("barcode"), rs.getString("name"), rs.getString("unit"), rs.getDouble("price"));
 
-            connctionUlti.closeConnection();
-            pstmt.close();
-            rs.close();
+            closeAllConnrction();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,9 +51,7 @@ public class ItemImple implements ItemDao {
                 items.add(item);
             }
 
-            connctionUlti.closeConnection();
-            pstmt.close();
-            rs.close();
+            closeAllConnrction();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -84,9 +82,8 @@ public class ItemImple implements ItemDao {
                 promotions.add(promotion);
             }
 
-            connctionUlti.closeConnection();
-            pstmt.close();
-            rs.close();
+            closeAllConnrction();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -109,12 +106,21 @@ public class ItemImple implements ItemDao {
             rs.next();
             category = new Category(rs.getString("id"), rs.getString("name"));
 
-            connctionUlti.closeConnection();
+            closeAllConnrction();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return category;
+    }
+
+    private void closeAllConnrction(){
+        connctionUlti.closeConnection();
+        try {
             pstmt.close();
             rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return category;
     }
 }
