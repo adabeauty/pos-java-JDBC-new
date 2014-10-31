@@ -2,8 +2,7 @@ package com.thoughtworks.iamcoach.pos.Dao;
 
 import com.thoughtworks.iamcoach.pos.module.*;
 import com.thoughtworks.iamcoach.pos.Ulti.ConnctionUlti;
-import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
-import com.thoughtworks.iamcoach.pos.module.promotion.PromotionFactory;
+import com.thoughtworks.iamcoach.pos.module.promotion.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -104,6 +103,7 @@ public class ItemImple implements ItemDao {
 
             rs = pstmt.executeQuery();
             rs.next();
+
             category = new Category(rs.getString("id"), rs.getString("name"));
 
             closeAllConnrction();
