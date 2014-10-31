@@ -15,10 +15,9 @@ public class CategoryImple implements CategoryDao{
     
     @Override
     public ArrayList<Category> getCategories() {
-        ArrayList<Category> categories = new ArrayList<Category>();
         String sql = "SELECT * FROM categories";
 
-        Category promotion = null;
+        ArrayList<Category> categories = new ArrayList<Category>();
         Connection conn = connctionUlti.getConnection();
         try{
             preparedStatement = conn.prepareStatement(sql);
@@ -29,10 +28,7 @@ public class CategoryImple implements CategoryDao{
                 categories.add(category);
             }
 
-            connctionUlti.closeConnection();
-            preparedStatement.close();
-            resultSet.close();
-
+            CloseAllConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -42,6 +38,7 @@ public class CategoryImple implements CategoryDao{
     @Override
     public Category getCategoryById(int id) {
         String sql = "SELECT * FROM categories WHERE id = ?";
+
         Category category = null;
         Connection conn = connctionUlti.getConnection();
         try{
@@ -51,13 +48,21 @@ public class CategoryImple implements CategoryDao{
             resultSet.next();
             category = new Category(resultSet.getString("id"), resultSet.getString("name"));
 
-            connctionUlti.closeConnection();
-            preparedStatement.close();
-            resultSet.close();
+            CloseAllConnection();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return category;
+    }
+
+    private void CloseAllConnection(){
+        connctionUlti.closeConnection();
+        try {
+            preparedStatement.close();
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
