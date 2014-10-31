@@ -25,16 +25,9 @@ public class PromotionImple implements PromotionDao {
             result = preparedStatement.executeQuery();
             result.next();
 
-            promotion = PromotionFactory.generatePromotion(result.getInt("type"));
+            promotion = setPromotion(result);
 
-            promotion.setId(result.getInt("id"));
-            promotion.setId(result.getInt("type"));
-            promotion.setDescription(result.getString("description"));
-            if(result.getInt("type") == 3){
-                promotion.setDiscount(result.getDouble("discount"));
-            }
-
-            closeAll();
+            closeAllConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -54,16 +47,10 @@ public class PromotionImple implements PromotionDao {
 
             result = preparedStatement.executeQuery(sql);
             while (result.next()){
-                promotion = PromotionFactory.generatePromotion(result.getInt("type"));
-
-                promotion.setId(result.getInt("id"));
-                promotion.setId(result.getInt("type"));
-                promotion.setDescription(result.getString("description"));
-                promotion.setDiscount(result.getDouble("discount"));
-
+                promotion = setPromotion(result);
                 promotions.add(promotion);
             }
-            closeAll();
+            closeAllConnection();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -71,7 +58,7 @@ public class PromotionImple implements PromotionDao {
         return promotions;
     }
 
-    private void closeAll(){
+    private void closeAllConnection(){
         connctionUlti.closeConnection();
         try {
             preparedStatement.close();
@@ -81,15 +68,21 @@ public class PromotionImple implements PromotionDao {
         }
     }
 
-//    private Promotion generatePromotion(type){
-//        Promotion promotion =  promotion = PromotionFactory.generatePromotion(type);
-//
-//        promotion.setId(id);
-//        promotion.setId(type);
-//        promotion.setDescription(description);
-//        if(type == 3){
-//            rs.getDouble("discount");
-//        }
-//        return promotion;
-//    }
+    private Promotion setPromotion(ResultSet rs){
+        Promotion promotion = null;
+        try {
+            promotion  =  PromotionFactory.generatePromotion(rs.getInt("type"));
+
+            promotion.setId(rs.getInt("id"));
+            promotion.setId(rs.getInt("type"));
+            promotion.setDescription(rs.getString("description"));
+            if(rs.getInt("type") == 3){
+                promotion.setDiscount(result.getDouble("discount"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return promotion;
+    }
 }
