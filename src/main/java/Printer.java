@@ -9,8 +9,15 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Printer {
-    CartService cartService = new CartService();
-    ArrayList<CartItem> cartItems = cartService.getCartInfo();
+    private  CartService cartService = null;
+    private  ArrayList<CartItem> cartItems = null;
+
+    public Printer(CartService cartService){
+        this.cartService = cartService;
+        this.cartItems = cartService.getCartInfo();
+    }
+//    CartService cartService = new CartService();
+//    ArrayList<CartItem> cartItems = cartService.getCartInfo();
 
     public String printList() {
         return printShopName() + "\n"
