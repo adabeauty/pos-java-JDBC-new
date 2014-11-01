@@ -18,8 +18,8 @@ public class CartService {
 
         ArrayList<CartItem> cartItems = new ArrayList<CartItem>();
 
-        ReadFileUlti readFileUlti = new ReadFileUlti();
-        ArrayList<String> inputs = readFileUlti.readFile("cart.txt");
+//        ReadFileUlti readFileUlti = new ReadFileUlti();
+        ArrayList<String> inputs = ReadFileUlti.readFile("cart.txt");
 
         ArrayList<Item> items = itemImple.getItems();
         ArrayList<Promotion> promotionArrayList = null;

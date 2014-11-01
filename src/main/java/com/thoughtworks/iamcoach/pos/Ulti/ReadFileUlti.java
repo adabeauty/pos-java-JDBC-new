@@ -5,7 +5,7 @@ import java.nio.file.*;
 import java.util.ArrayList;
 
 public class ReadFileUlti {
-    public ArrayList<String> readFile(String fileName){
+    public static ArrayList<String> readFile(String fileName){
         ArrayList<String> text = new ArrayList<String>();
 
         try {
