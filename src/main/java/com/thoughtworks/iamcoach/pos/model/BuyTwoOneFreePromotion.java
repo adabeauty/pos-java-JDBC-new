@@ -9,7 +9,7 @@ public class BuyTwoOneFreePromotion extends Promotion {
     }
 
     @Override
-    public double calcultaPromotion(Item item, double num) {
+    public double calculate(Item item, double num) {
         double promotionNumber = ((int) num)/3;
         double actualNumber = num - promotionNumber;
         return actualNumber * item.getPrice();

@@ -13,7 +13,7 @@ public class DiscountPromotionTest {
         double num = 1.0;
 
         DiscountPromotion discountPromotion = new DiscountPromotion(1, 1, "second_half_price",  0.75);
-        assertThat(discountPromotion.calcultaPromotion(item, num)).isEqualTo(6);
+        assertThat(discountPromotion.calculate(item, num)).isEqualTo(6);
     }
 
 }

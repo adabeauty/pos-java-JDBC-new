@@ -13,6 +13,6 @@ public class SeconHalfPromotionTest {
         double num = 2.0;
 
         SeconHalfPromotion seconHalfPromotion = new SeconHalfPromotion(1, 1, "second_half_price", 1);
-        assertThat(seconHalfPromotion.calcultaPromotion(item, num)).isEqualTo(12.0);
+        assertThat(seconHalfPromotion.calculate(item, num)).isEqualTo(12.0);
     }
 }

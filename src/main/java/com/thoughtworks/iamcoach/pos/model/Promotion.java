@@ -61,5 +61,5 @@ public abstract class Promotion {
                 '}';
     }
 
-    public abstract double calcultaPromotion(Item item, double num);
+    public abstract double calculate(Item item, double num);
 }
