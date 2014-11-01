@@ -40,7 +40,7 @@ public class CartService {
 
         double total = 0;
         for(int i=0; i<cartItems.size(); i++){
-            double actualSubTotal = cartItems.get(i).getNum() * cartItems.get(i).getPrice();
+            double actualSubTotal = cartItems.get(i).getNum() * cartItems.get(i).getItem().getPrice();
             total += actualSubTotal;
         }
 

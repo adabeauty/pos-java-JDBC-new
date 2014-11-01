@@ -54,11 +54,11 @@ public class Printer {
         String categoryText = "";
 
         CategoryDao categoryImple = new CategoryImple();
-        categoryText += categoryImple.getCategoryById(cartItems.get(0).getCategoryId()).getName() + "\n";
+        categoryText += categoryImple.getCategoryById(cartItems.get(0).getItem().getCategoryId()).getName() + "\n";
 
         for (CartItem cartItem : cartItems) {
-            categoryText += "名称：" + cartItem.getName() + "   数量：" + cartItem.getNum()
-                    + "   单价：" + cartItem.getPrice() + "元" + "   单位：" + cartItem.getUnit()
+            categoryText += "名称：" + cartItem.getItem().getName() + "   数量：" + cartItem.getNum()
+                    + "   单价：" + cartItem.getItem().getPrice() + "元" + "   单位：" + cartItem.getItem().getUnit()
                     + "   小计：" + cartItem.getSubtotal() + "元" +"\n";
 
         }
@@ -78,7 +78,7 @@ public class Printer {
         ArrayList<CartItem> dividedCartItems = new ArrayList<CartItem>();
 
         for(int j=0; j<cartItems.size(); j++){
-            if(cartItems.get(j).getCategoryId() == categoryId){
+            if(cartItems.get(j).getItem().getCategoryId() == categoryId){
                 dividedCartItems.add(cartItems.get(j));
             }
         }
