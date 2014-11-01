@@ -9,7 +9,11 @@ import com.thoughtworks.iamcoach.pos.model.Promotion;
 import java.util.ArrayList;
 
 public class CartService {
-    private ItemDao itemImple = new ItemImple();
+//    private ItemDao itemImple = new ItemImple();
+    private ItemDao itemImple;
+    public CartService(ItemDao itemImple){
+        this.itemImple = itemImple;
+    }
 
     public void setItemImple(ItemDao itemImple) {
         this.itemImple = itemImple;
