@@ -1,23 +1,22 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
-import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
 import com.thoughtworks.iamcoach.pos.model.*;
 
 import java.util.ArrayList;
 
 public class CartService {
     private ItemDao itemImple;
+    private ArrayList<String> inputs;
 
-    public CartService(ItemDao itemImple){
+    public CartService(ArrayList<String> inputs, ItemDao itemImple){
+        this.inputs = inputs;
         this.itemImple = itemImple;
     }
 
     public ArrayList<CartItem> getCartInfo() {
 
         ArrayList<CartItem> cartItems = new ArrayList<CartItem>();
-
-        ArrayList<String> inputs = ReadFileUlti.readFile("cart.txt");
 
         ArrayList<Item> items = itemImple.getItems();
         ArrayList<Promotion> promotionArrayList = null;
