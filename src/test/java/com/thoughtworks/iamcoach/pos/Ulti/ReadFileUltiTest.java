@@ -1,5 +1,6 @@
 package com.thoughtworks.iamcoach.pos.Ulti;
 
+import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
 import org.junit.Test;
 
 import static org.fest.assertions.api.Assertions.assertThat;

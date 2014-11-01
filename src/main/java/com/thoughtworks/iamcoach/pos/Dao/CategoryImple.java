@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos.Dao;
 
-import com.thoughtworks.iamcoach.pos.Ulti.ConnctionUlti;
+import com.thoughtworks.iamcoach.pos.util.ConnctionUlti;
 import com.thoughtworks.iamcoach.pos.model.Category;
 
 import java.sql.*;

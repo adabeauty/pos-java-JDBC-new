@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos.service;
 
-import com.thoughtworks.iamcoach.pos.Ulti.ReadFileUlti;
+import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
 
 import java.util.ArrayList;
 
