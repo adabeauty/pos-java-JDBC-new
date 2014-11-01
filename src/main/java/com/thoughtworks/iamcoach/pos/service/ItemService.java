@@ -6,7 +6,11 @@ import com.thoughtworks.iamcoach.pos.model.*;
 import java.util.ArrayList;
 
 public class ItemService {
-    private ItemImple itemImple = new ItemImple();
+    private ItemImple itemImple;
+
+    public ItemService(ItemImple itemImple) {
+        this.itemImple = itemImple;
+    }
 
     public void setItemImple(ItemImple itemImple) {
         this.itemImple = itemImple;
