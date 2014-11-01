@@ -16,6 +16,7 @@ import static org.mockito.Mockito.when;
 
 public class ItemServiceTest {
     ItemService itemService = null;
+    
     @Before
     public void mock_ItemImpl(){
         ArrayList<Item> items = new ArrayList<Item>();
@@ -41,16 +42,12 @@ public class ItemServiceTest {
 
     @Test
     public void can_get_all_items(){
-
-        itemService.setItemImple(mock_ItemImple());
-
         assertThat(itemService.getItems().size()).isEqualTo(1);
     }
 
 
     @Test
     public void can_get_item_by_barcode(){
-
         Item item = new Item(null, 3,"TF1001", "juice", "can", 8.0);
         String barcode = "TF1001";
         assertThat(itemService.getItemByBarcode(barcode).toString()).isEqualTo(item.toString());
@@ -58,39 +55,14 @@ public class ItemServiceTest {
 
     @Test
     public void can_get_promotions_of_item(){
-
         int id = 1;
         assertThat(itemService.getPromotions(id).size()).isEqualTo(1);
     }
 
     @Test
     public void can_get_category_of_item(){
-
         int id = 1;
         Category category = new Category(null, "drink");
         assertThat(itemService.getCategory(id).toString()).isEqualTo(category.toString());
     }
-
-    private  ItemImple mock_ItemImple(){
-        ArrayList<Item> items = new ArrayList<Item>();
-        Item item = new Item(null, 3,"TF1001", "juice", "can", 8.0);
-        items.add(item);
-
-        ArrayList<Promotion> promotions = new ArrayList<Promotion>();
-        Promotion promotion = new BuyTwoOneFreePromotion(1, 1, "buy_two_one_free", 1.0);
-        promotions.add(promotion);
-
-        String barcode = "TF1001";
-        int id = 1;
-        Category category = new Category(null, "drink");
-
-        ItemImple itemImple = mock(ItemImple.class);
-        when(itemImple.getItems()).thenReturn(items);
-        when(itemImple.getItemByBarcode(barcode)).thenReturn(item);
-        when(itemImple.getPromotions(id)).thenReturn(promotions);
-        when(itemImple.getCategory(id)).thenReturn(category);
-
-        return itemImple;
-    }
-
 }
