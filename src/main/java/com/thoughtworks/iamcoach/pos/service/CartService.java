@@ -15,10 +15,6 @@ public class CartService {
         this.itemImple = itemImple;
     }
 
-    public void setItemImple(ItemDao itemImple) {
-        this.itemImple = itemImple;
-    }
-
     public ArrayList<CartItem> getCartInfo() {
 
         ArrayList<CartItem> cartItems = new ArrayList<CartItem>();
