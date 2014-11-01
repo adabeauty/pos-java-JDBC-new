@@ -12,10 +12,6 @@ public class ItemService {
         this.itemImple = itemImple;
     }
 
-    public void setItemImple(ItemImple itemImple) {
-        this.itemImple = itemImple;
-    }
-
     public ArrayList<Item> getItems() {
         return itemImple.getItems();
     }
