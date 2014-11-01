@@ -6,9 +6,9 @@ import com.thoughtworks.iamcoach.pos.model.Promotion;
 import java.util.ArrayList;
 
 public class PromotionService {
-    private PromotionDao promotionImple = new PromotionImple();
+    private PromotionDao promotionImple;
 
-    public void setPromotionImple(PromotionDao promotionImple) {
+    public PromotionService(PromotionDao promotionImple) {
         this.promotionImple = promotionImple;
     }
 
