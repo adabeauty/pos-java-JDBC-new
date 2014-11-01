@@ -2,15 +2,13 @@ package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
-import com.thoughtworks.iamcoach.pos.model.CartItem;
-import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.Promotion;
+import com.thoughtworks.iamcoach.pos.model.*;
 
 import java.util.ArrayList;
 
 public class CartService {
-//    private ItemDao itemImple = new ItemImple();
     private ItemDao itemImple;
+
     public CartService(ItemDao itemImple){
         this.itemImple = itemImple;
     }
