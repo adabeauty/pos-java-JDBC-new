@@ -2,6 +2,7 @@ package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.model.*;
+import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +38,8 @@ public class CartServiceTest {
         when(itemImple.getPromotions(4)).thenReturn(promotions);
         when(itemImple.getPromotions(5)).thenReturn(promotions);
 
-      cartService = new CartService(itemImple);
+        ArrayList<String> inputs = ReadFileUlti.readFile("cart.txt");
+        cartService = new CartService(inputs, itemImple);
     }
 
     @Test
