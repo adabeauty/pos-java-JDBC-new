@@ -12,17 +12,6 @@ public class Printer {
     CartService cartService = new CartService();
     ArrayList<CartItem> cartItems = cartService.getCartInfo();
 
-    public ArrayList<CartItem> divideCartItems(int categoryId) {
-        ArrayList<CartItem> dividedCartItems = new ArrayList<CartItem>();
-
-        for(int j=0; j<cartItems.size(); j++){
-            if(cartItems.get(j).getCategoryId() == categoryId){
-                dividedCartItems.add(cartItems.get(j));
-            }
-        }
-        return dividedCartItems;
-    }
-
     public String printList() {
         return printShopName() + "\n"
                 + printDate() + "\n"
@@ -82,5 +71,17 @@ public class Printer {
                 + "   优惠金额：" + (cartService.getTotalSum() - cartService.getActualSum()) + "元"
                 + "   总计：" + cartService.getActualSum()+ "元" + "\n"
                 + "----------------------------------------------------------";
+    }
+
+
+    private ArrayList<CartItem> divideCartItems(int categoryId) {
+        ArrayList<CartItem> dividedCartItems = new ArrayList<CartItem>();
+
+        for(int j=0; j<cartItems.size(); j++){
+            if(cartItems.get(j).getCategoryId() == categoryId){
+                dividedCartItems.add(cartItems.get(j));
+            }
+        }
+        return dividedCartItems;
     }
 }
