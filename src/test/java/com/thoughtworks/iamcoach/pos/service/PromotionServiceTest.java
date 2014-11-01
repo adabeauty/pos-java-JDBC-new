@@ -39,18 +39,4 @@ public class PromotionServiceTest {
     public void can_get_promotions(){
         assertThat(promotionService.getPromotions().size()).isEqualTo(1);
     }
-
-    private PromotionDao mock_PromotionImple(){
-        int type = 1;
-        Promotion promotion = new SeconHalfPromotion();
-
-        ArrayList<Promotion> promotions = new ArrayList<Promotion>();
-        promotions.add(promotion);
-
-        PromotionDao promotionImple = mock(PromotionImple.class);
-        when(promotionImple.getPromotionByType(type)).thenReturn(promotion);
-        when(promotionImple.getPromotions()).thenReturn(promotions);
-
-        return promotionImple;
-    }
 }
