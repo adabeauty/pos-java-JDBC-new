@@ -2,8 +2,8 @@ package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.promotion.DiscountPromotion;
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.DiscountPromotion;
+import com.thoughtworks.iamcoach.pos.model.Promotion;
 import org.junit.Test;
 
 import java.util.ArrayList;

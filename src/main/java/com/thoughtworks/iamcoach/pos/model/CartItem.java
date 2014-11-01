@@ -1,7 +1,5 @@
 package com.thoughtworks.iamcoach.pos.model;
 
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

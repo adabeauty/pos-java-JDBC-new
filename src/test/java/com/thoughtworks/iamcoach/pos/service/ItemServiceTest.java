@@ -3,8 +3,8 @@ package com.thoughtworks.iamcoach.pos.service;
 import com.thoughtworks.iamcoach.pos.dao.ItemImple;
 import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.promotion.BuyTwoOneFreePromotion;
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.BuyTwoOneFreePromotion;
+import com.thoughtworks.iamcoach.pos.model.Promotion;
 import org.junit.Test;
 
 import java.util.ArrayList;

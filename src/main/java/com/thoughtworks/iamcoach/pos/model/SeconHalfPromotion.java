@@ -1,6 +1,4 @@
-package com.thoughtworks.iamcoach.pos.model.promotion;
-
-import com.thoughtworks.iamcoach.pos.model.Item;
+package com.thoughtworks.iamcoach.pos.model;
 
 public class SeconHalfPromotion extends Promotion {
     public SeconHalfPromotion() {

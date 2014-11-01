@@ -1,7 +1,7 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.Promotion;
 
 import java.util.ArrayList;
 

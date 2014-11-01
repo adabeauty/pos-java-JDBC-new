@@ -4,7 +4,7 @@ import com.thoughtworks.iamcoach.pos.dao.ItemImple;
 import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.model.Item;
 import com.thoughtworks.iamcoach.pos.module.*;
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.Promotion;
 
 import java.util.ArrayList;
 

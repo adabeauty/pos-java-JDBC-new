@@ -2,8 +2,8 @@ package com.thoughtworks.iamcoach.pos.dao;
 
 import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
-import com.thoughtworks.iamcoach.pos.model.promotion.PromotionFactory;
+import com.thoughtworks.iamcoach.pos.model.Promotion;
+import com.thoughtworks.iamcoach.pos.model.PromotionFactory;
 import com.thoughtworks.iamcoach.pos.module.*;
 import com.thoughtworks.iamcoach.pos.util.ConnctionUlti;
 import com.thoughtworks.iamcoach.pos.module.promotion.*;
