@@ -54,7 +54,7 @@ public class Printer {
         String categoryText = "";
 
         CategoryDao categoryImple = new CategoryImple();
-        categoryText += "分类：" + categoryImple.getCategoryById(cartItems.get(0).getCategoryId()).getName() + "\n";
+        categoryText += categoryImple.getCategoryById(cartItems.get(0).getCategoryId()).getName() + "\n";
 
         for (CartItem cartItem : cartItems) {
             categoryText += "名称：" + cartItem.getName() + "   数量：" + cartItem.getNum()
