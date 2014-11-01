@@ -4,6 +4,7 @@ import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.model.Item;
 import com.thoughtworks.iamcoach.pos.model.DiscountPromotion;
 import com.thoughtworks.iamcoach.pos.model.Promotion;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,28 +15,10 @@ import static org.mockito.Mockito.when;
 
 public class CartServiceTest {
 
-    @Test
-    public void can_get_all_cartItems(){
-        CartService cartService = new CartService(mock_ItemImple());
+    CartService cartService = null;
 
-        assertThat(cartService.getCartInfo().size()).isEqualTo(3);
-        assertThat(cartService.getCartInfo().get(0).getNum()).isEqualTo(5);
-        assertThat(cartService.getCartInfo().get(1).getNum()).isEqualTo(2.0);
-    }
-
-    @Test
-    public void can_get_total_sum(){
-        CartService cartService = new CartService(mock_ItemImple());
-        assertThat(cartService.getTotalSum()).isEqualTo(123);
-    }
-
-    @Test
-    public void can_get_actual_sum(){
-        CartService cartService = new CartService(mock_ItemImple());
-        assertThat(cartService.getActualSum()).isEqualTo(123);
-    }
-
-    private ItemDao mock_ItemImple(){
+    @Before
+    public void mock_ItemImpl(){
         ArrayList<Item> items = new ArrayList<Item>();
         items.add(new Item("1", 3, "ITEM000001", "apple", "kg", 8.0));
         items.add(new Item("2", 1, "ITEM000002", "cocacola", "can", 2.5));
@@ -56,6 +39,27 @@ public class CartServiceTest {
         when(itemImple.getPromotions(4)).thenReturn(promotions);
         when(itemImple.getPromotions(5)).thenReturn(promotions);
 
-        return itemImple;
+      cartService = new CartService(itemImple);
+    }
+
+    @Test
+    public void can_get_all_cartItems(){
+//        CartService cartService = new CartService(mock_ItemImple());
+
+        assertThat(cartService.getCartInfo().size()).isEqualTo(3);
+        assertThat(cartService.getCartInfo().get(0).getNum()).isEqualTo(5);
+        assertThat(cartService.getCartInfo().get(1).getNum()).isEqualTo(2.0);
+    }
+
+    @Test
+    public void can_get_total_sum(){
+//        CartService cartService = new CartService(mock_ItemImple());
+        assertThat(cartService.getTotalSum()).isEqualTo(123);
+    }
+
+    @Test
+    public void can_get_actual_sum(){
+//        CartService cartService = new CartService(mock_ItemImple());
+        assertThat(cartService.getActualSum()).isEqualTo(123);
     }
 }
