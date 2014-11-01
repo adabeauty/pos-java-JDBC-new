@@ -1,7 +1,5 @@
-import com.thoughtworks.iamcoach.pos.dao.CategoryDao;
-import com.thoughtworks.iamcoach.pos.dao.CategoryImple;
-import com.thoughtworks.iamcoach.pos.model.CartItem;
-import com.thoughtworks.iamcoach.pos.model.Category;
+import com.thoughtworks.iamcoach.pos.dao.*;
+import com.thoughtworks.iamcoach.pos.model.*;
 import com.thoughtworks.iamcoach.pos.service.CartService;
 
 import java.text.SimpleDateFormat;
@@ -16,8 +14,6 @@ public class Printer {
         this.cartService = cartService;
         this.cartItems = cartService.getCartInfo();
     }
-//    CartService cartService = new CartService();
-//    ArrayList<CartItem> cartItems = cartService.getCartInfo();
 
     public String printList() {
         return printShopName() + "\n"
