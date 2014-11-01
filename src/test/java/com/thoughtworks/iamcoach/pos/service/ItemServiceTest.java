@@ -1,22 +1,18 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.ItemImple;
-import com.thoughtworks.iamcoach.pos.model.Category;
-import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.BuyTwoOneFreePromotion;
-import com.thoughtworks.iamcoach.pos.model.Promotion;
+import com.thoughtworks.iamcoach.pos.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
 import static org.fest.assertions.api.Assertions.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class ItemServiceTest {
     ItemService itemService = null;
-    
+
     @Before
     public void mock_ItemImpl(){
         ArrayList<Item> items = new ArrayList<Item>();
