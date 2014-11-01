@@ -1,6 +1,6 @@
 package com.thoughtworks.iamcoach.pos.service;
 
-import com.thoughtworks.iamcoach.pos.Dao.*;
+import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.model.Item;
 import com.thoughtworks.iamcoach.pos.model.promotion.DiscountPromotion;
 import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;

@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.Dao;
+package com.thoughtworks.iamcoach.pos.dao;
 
 import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.model.Item;

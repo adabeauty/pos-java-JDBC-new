@@ -1,5 +1,5 @@
-import com.thoughtworks.iamcoach.pos.Dao.CategoryDao;
-import com.thoughtworks.iamcoach.pos.Dao.CategoryImple;
+import com.thoughtworks.iamcoach.pos.dao.CategoryDao;
+import com.thoughtworks.iamcoach.pos.dao.CategoryImple;
 import com.thoughtworks.iamcoach.pos.model.CartItem;
 import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.service.CartService;

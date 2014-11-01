@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.Dao;
+package com.thoughtworks.iamcoach.pos.dao;
 
 import com.thoughtworks.iamcoach.pos.util.ConnctionUlti;
 import com.thoughtworks.iamcoach.pos.model.Category;
