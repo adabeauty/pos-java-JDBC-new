@@ -1,8 +1,10 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.Dao.ItemImple;
+import com.thoughtworks.iamcoach.pos.model.Category;
+import com.thoughtworks.iamcoach.pos.model.Item;
 import com.thoughtworks.iamcoach.pos.module.*;
-import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.promotion.Promotion;
 
 import java.util.ArrayList;
 

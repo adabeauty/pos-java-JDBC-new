@@ -1,7 +1,6 @@
-package com.thoughtworks.iamcoach.pos.module.promotion;
+package com.thoughtworks.iamcoach.pos.model.promotion;
 
-import com.thoughtworks.iamcoach.pos.module.Item;
-import com.thoughtworks.iamcoach.pos.module.promotion.Promotion;
+import com.thoughtworks.iamcoach.pos.model.Item;
 
 public class BuyTwoOneFreePromotion extends Promotion {
     public BuyTwoOneFreePromotion() {

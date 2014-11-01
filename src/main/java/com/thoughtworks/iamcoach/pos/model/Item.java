@@ -1,4 +1,4 @@
-package com.thoughtworks.iamcoach.pos.module;
+package com.thoughtworks.iamcoach.pos.model;
 
 public class Item {
 

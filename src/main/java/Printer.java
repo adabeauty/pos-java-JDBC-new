@@ -1,7 +1,7 @@
 import com.thoughtworks.iamcoach.pos.Dao.CategoryDao;
 import com.thoughtworks.iamcoach.pos.Dao.CategoryImple;
-import com.thoughtworks.iamcoach.pos.module.CartItem;
-import com.thoughtworks.iamcoach.pos.module.Category;
+import com.thoughtworks.iamcoach.pos.model.CartItem;
+import com.thoughtworks.iamcoach.pos.model.Category;
 import com.thoughtworks.iamcoach.pos.service.CartService;
 
 import java.text.SimpleDateFormat;

@@ -1,7 +1,7 @@
 package com.thoughtworks.iamcoach.pos.Dao;
 
 
-import com.thoughtworks.iamcoach.pos.module.Category;
+import com.thoughtworks.iamcoach.pos.model.Category;
 import java.util.ArrayList;
 
 public interface CategoryDao {
