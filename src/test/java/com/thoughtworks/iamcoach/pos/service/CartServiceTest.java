@@ -1,9 +1,7 @@
 package com.thoughtworks.iamcoach.pos.service;
 
 import com.thoughtworks.iamcoach.pos.dao.*;
-import com.thoughtworks.iamcoach.pos.model.Item;
-import com.thoughtworks.iamcoach.pos.model.DiscountPromotion;
-import com.thoughtworks.iamcoach.pos.model.Promotion;
+import com.thoughtworks.iamcoach.pos.model.*;
 import org.junit.Before;
 import org.junit.Test;
 
