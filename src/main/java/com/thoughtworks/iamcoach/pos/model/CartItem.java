@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//public class CartItem extends Item{
 public class CartItem{
 
     private Item item =null;
@@ -12,7 +11,6 @@ public class CartItem{
     private List<Promotion> promotionList = new ArrayList<Promotion>();
 
     public CartItem(Item item, double num, ArrayList<Promotion> promotionList) {
-//        super(item.getId(), item.getCategoryId(), item.getBarcode(), item.getName(), item.getUnit(), item.getPrice());
         this.item = item;
         this.num = num;
         this.promotionList = promotionList;
@@ -37,7 +35,6 @@ public class CartItem{
     public double getSubtotal() {
         ArrayList<Double> allSubTotals = new ArrayList<Double>();
 
-//        Item item = new Item(this.getId(), this.getCategoryId(), this.getBarcode(), this.getName(), this.getUnit(), this.getPrice());
         Item item = new Item(getItem().getId(), getItem().getCategoryId(), getItem().getBarcode(), getItem().getName(), getItem().getUnit(), getItem().getPrice());
 
         for(int i=0; i<getPromotionList().size(); i++){
