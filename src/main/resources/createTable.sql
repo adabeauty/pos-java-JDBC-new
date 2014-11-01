@@ -2,11 +2,6 @@ DROP DATABASE IF EXISTS pos_java;
 CREATE DATABASE pos_java DEFAULT CHARACTER SET utf8;
 use pos_java;
 
-drop table relationship;
-drop table promotions;
-drop table items;
-drop table categories;
-
 create table categories (
   id int auto_increment not null primary key,
   name varchar(20)
