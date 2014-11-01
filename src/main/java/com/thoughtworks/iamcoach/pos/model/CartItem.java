@@ -26,10 +26,6 @@ public class CartItem extends Item{
         return promotionList;
     }
 
-    public void setPromotionList(List<Promotion> promotionList) {
-        this.promotionList = promotionList;
-    }
-
     public double getSubtotal() {
         ArrayList<Double> allSubTotals = new ArrayList<Double>();
 
