@@ -3,14 +3,14 @@ package com.thoughtworks.iamcoach.pos.service;
 import com.thoughtworks.iamcoach.pos.dao.*;
 import com.thoughtworks.iamcoach.pos.model.*;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class CartService {
     private ItemDao itemImple;
     private ArrayList<String> inputs;
 
-    public CartService(ArrayList<String> inputs, ItemDao itemImple){
-        this.inputs = inputs;
+    public CartService(Scanner scanner, ItemDao itemImple){
+        this.inputs = scanner.getInputs();
         this.itemImple = itemImple;
     }
 
