@@ -6,7 +6,7 @@ import com.thoughtworks.iamcoach.pos.util.ReadFileUlti;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.*;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -39,7 +39,8 @@ public class CartServiceTest {
         when(itemImple.getPromotions(5)).thenReturn(promotions);
 
         ArrayList<String> inputs = ReadFileUlti.readFile("cart.txt");
-        cartService = new CartService(inputs, itemImple);
+        Scanner scanner = new Scanner();
+        cartService = new CartService(scanner, itemImple);
     }
 
     @Test
